@@ -52,7 +52,7 @@ class MifloraCard extends HTMLElement {
         var _maxMoisture = config.max_moisture;
         var _minMoisture = config.min_moisture;
         var _minConductivity = config.min_conductivity;
-        var _minTemperature = config.min_termperature;
+        var _minTemperature = config.min_temperature;
         var _sensors = [];
         for (var i = 0; i < config.entities.length; i++) {
             _sensors.push(config.entities[i].split(":")); // Split name away from sensor id
@@ -94,7 +94,7 @@ class MifloraCard extends HTMLElement {
                     _alertIcon = '&#9660; ';
                 }
             }
-            if (_name == 'termperature') {
+            if (_name == 'temperature') {
                 if (_state < _minTemperature) {
                     _alertStyle = ';color:red';
                     _alertIcon = '&#9660; ';
